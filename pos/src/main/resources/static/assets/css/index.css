@@ -1,0 +1,24 @@
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.sideShowButton {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .currentOrder {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .sideShowButton {
+    display: block;
+  }
+}
+
+#currentOrder {
+  width: 600px;
+}
+
