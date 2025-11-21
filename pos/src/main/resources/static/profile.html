@@ -18,8 +18,8 @@
     <link rel="icon" type="image/png" sizes="100x100" href="assets/img/icon.png?h=f2ceb92e0c052857785252200a79dbaa">
     <link rel="icon" type="image/png" sizes="100x100" href="assets/img/icon.png?h=f2ceb92e0c052857785252200a79dbaa">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=79ce12dbe70c189de86bb63b9da0df1f">
-    <link rel="manifest" href="manifest.json?h=9636bcf246b800955d9ce3b8012330c4">
-    <link rel="stylesheet" href="assets/css/Nunito.css?h=8d5f7beebb55a7a88f18e567572c6f71">
+    <link rel="manifest" href="manifest.json?h=fdaab650b22fce16c164e7cab4661b15">
+    <link rel="stylesheet" href="assets/css/Nunito.css?h=e534632725b46d16b0220351903b1712">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css?h=13bea3cde590997c1094f9bba14d719a">
     <link rel="stylesheet" href="assets/css/Banner-Heading-Image-images.css?h=4f3cfa46e40e236365345fc77963f4b8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -27,66 +27,228 @@
     <link rel="stylesheet" href="assets/css/index.css?h=98586349732e0e1cc91f5a0af7018254">
     <link rel="stylesheet" href="assets/css/profile.css?h=fc46188ed697985a0bd85ef4c0ac5bcf">
     <link rel="stylesheet" href="assets/css/Simple-Slider-Simple-Slider.css?h=da830b6503e0457b5735b0129f20b163">
+    <script src="assets/js-controller/Auth.js"></script>
 </head>
 
 <body style="position: relative;">
+
     <nav class="navbar navbar-light navbar-expand shadow-lg">
         <div class="container"><a class="navbar-brand" href="profile.html">Profile</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active link-primary" href="login.html"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" style="margin-top: -3px;">
-                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                    <li class="nav-item">
+                        <a id="logout" class="nav-link active link-primary" href="#logout">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" style="margin-top: -3px;">
                                 <path d="M288 256C288 273.7 273.7 288 256 288C238.3 288 224 273.7 224 256V32C224 14.33 238.3 0 256 0C273.7 0 288 14.33 288 32V256zM80 256C80 353.2 158.8 432 256 432C353.2 432 432 353.2 432 256C432 201.6 407.3 152.9 368.5 120.6C354.9 109.3 353 89.13 364.3 75.54C375.6 61.95 395.8 60.1 409.4 71.4C462.2 115.4 496 181.8 496 255.1C496 388.5 388.5 496 256 496C123.5 496 16 388.5 16 255.1C16 181.8 49.75 115.4 102.6 71.4C116.2 60.1 136.4 61.95 147.7 75.54C158.1 89.13 157.1 109.3 143.5 120.6C104.7 152.9 80 201.6 80 256z"></path>
-                            </svg>&nbsp;Logout</a></li>
+                            </svg>&nbsp;Logout
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <section>
         <div class="container">
             <div class="row" style="height: calc(100vh - 56px);">
                 <div class="col-md-9 col-lg-7 col-xl-6 col-xxl-5 align-self-center m-auto">
-                    <div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" style="margin-top: -3px;">
-                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
-                            <path d="M80 192V144C80 64.47 144.5 0 224 0C303.5 0 368 64.47 368 144V192H384C419.3 192 448 220.7 448 256V448C448 483.3 419.3 512 384 512H64C28.65 512 0 483.3 0 448V256C0 220.7 28.65 192 64 192H80zM144 192H304V144C304 99.82 268.2 64 224 64C179.8 64 144 99.82 144 144V192z"></path>
-                        </svg><span><strong>&nbsp; Password has been changed.</strong></span></div>
-                    <div class="alert alert-danger alert-dismissible" role="alert"><button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button><span><strong>Invalid Current Password or New Password did not matched.</strong></span></div>
+
+                    <div id="alertModal2" class="alert alert-dismissible d-none" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <span><strong id="alertModalMessage2"></strong></span>
+                    </div>
+
                     <div class="border rounded shadow-lg" style="padding: 50px 30px;position: relative;">
                         <div class="row">
-                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-center"><img class="rounded-circle img-fluid shadow-lg" src="assets/img/dogs/00916202501.jpg?h=5dba08c033a1ee205e43251693f1ce13" width="100"></div>
+                            <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 text-center">
+                                <img id="profileImage" class="rounded-circle img-fluid shadow-lg" src="assets/img/default.jpg" width="100">
+                            </div>
                             <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8 col-xxl-8 infoCol">
-                                <h4 class="fw-semibold text-dark" style="margin: 0;">Kenneth Salvador</h4>
-                                <p>Cashier</p><a class="text-decoration-none" href="#changePassModal" data-bs-target="#changePassModal" data-bs-toggle="modal">Change Password</a>
+                                <h4 id="uname" class="fw-semibold text-dark" style="margin: 0;">Account Name</h4>
+                                <p id="acc_type" style="margin:0;">Cashier</p>
+                                <p id="">Max Session Duration: 12 Hours</p>
+                                <a class="text-decoration-none" href="#changePassModal" data-bs-target="#changePassModal" data-bs-toggle="modal">Change Password</a>
                             </div>
                         </div>
-                        <p class="fw-bold text-dark" style="position: absolute; top: 20px; right: 20px;">10:30 PM</p>
-                    </div><button class="btn btn-primary btn-lg shadow-lg" type="button" style="width: 100%;margin-top: 20px;">Start Session</button>
+
+                        <p id="liveClock" class="fw-bold text-dark" style="position: absolute; top: 20px; right: 20px;">00:00 AM/PM</p>
+                    </div>
+
+                    <button id="session_button" class="btn btn-primary btn-lg shadow-lg" type="button" style="width: 100%;margin-top: 20px;">Start Session</button>
+
                 </div>
             </div>
         </div>
     </section>
+
     <div class="modal fade" role="dialog" tabindex="-1" id="changePassModal">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header text-bg-dark">
-                    <h4 class="modal-title">Change Password</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h4 class="modal-title">Change Password</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="input-group" style="margin-bottom: 18px;"><input class="form-control" type="password" placeholder="Current Password"></div>
-                    <div class="input-group" style="margin-bottom: 18px;"><input class="form-control" type="password" placeholder="New Password"></div>
-                    <div class="input-group"><input class="form-control" type="password" placeholder="Confirm Password"></div>
+                <div class="modal-body p-4">
+
+                    <div id="alertModal1" class="alert alert-dismissible d-none" role="alert">
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        <span><strong id="alertModalMessage1"></strong></span>
+                    </div>
+
+                    <div class="input-group" style="margin-bottom: 18px;"><input id="currentPass" class="form-control" type="password" placeholder="Current Password"></div>
+                    <div class="input-group" style="margin-bottom: 18px;"><input id="newPass1" class="form-control" type="password" placeholder="New Password"></div>
+                    <div class="input-group"><input id="newPass2" class="form-control" type="password" placeholder="Confirm Password"></div>
                 </div>
-                <div class="modal-footer"><button class="btn btn-secondary" type="button" data-bs-dismiss="modal" style="padding: 6px 34px;">Close</button><button class="btn btn-primary" type="button" style="padding: 6px 60px;">Change</button></div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal" style="padding: 6px 34px;">Close</button>
+                    <button id="changePassButton" class="btn btn-primary" type="button" style="padding: 6px 60px;">Change</button>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Session End Modal -->
+    <div class="modal" role="dialog" tabindex="-1" id="sessionEndModal">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h4 class="modal-title">Shift Summary: Kenneth Salvador</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div style="padding: 18px 18px 0 18px;">
+                            <h4 class="fw-bold text-dark">Sales Summary</h4>
+                            <div class="row" style="padding: 0 20px;">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Net Sales:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fs-4 fw-bold text-success">P 18,500</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Refunds:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-danger">P 2,100</p>
+                                </div>
+                            </div>
+                            <div class="row" style="padding: 0 20px;">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Service Charge:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-dark">P 18,500</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Discount:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-warning">P 500</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 18px 18px 0 18px;">
+                            <h4 class="fw-bold text-dark">Payment Received</h4>
+                            <div class="row" style="padding: 0 20px;">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Cash Total:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-dark">P 18,500</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Gcash Total:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-dark">P 2,100</p>
+                                </div>
+                            </div>
+                            <div class="row" style="padding: 0 20px;">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Card Total:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-dark">P 18,500</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Credit Total:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-dark">P 2,100</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 18px 18px 0 18px;">
+                            <h4 class="fw-bold text-dark">Float Declaration</h4>
+                            <div class="row" style="padding: 0 20px;">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Starting Cash:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-dark">P 18,500</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 18px 18px 0 18px;">
+                            <h4 class="fw-bold text-dark">Cash Declaration</h4>
+                            <div class="input-group"><span class="text-bg-dark input-group-text">Cash Declared (P):</span><input class="form-control" type="number" placeholder="Enter amount declared"></div>
+                        </div>
+                        <div style="padding: 18px 18px 0 18px;">
+                            <h3 class="fw-bold text-center text-dark" style="margin: 25px 0;">*** 5,185.00 ***</h3>
+                            <div class="row">
+                                <div class="col text-center">
+                                    <h4 class="fw-bold text-center text-dark">Cash Variance/Difference:</h4>
+                                </div>
+                                <div class="col text-center">
+                                    <h4 class="fw-bold text-center text-primary" style="text-decoration:  underline;">P 15.00 (Short)</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" type="button" data-bs-dismiss="modal">Print Report</button>
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="button" style="width: 30%;" data-bs-target="#liveToast" data-bs-toggle="toast">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Float Declaration Modal -->
+    <div class="modal" role="dialog" tabindex="-1" id="startingCashFloatModal">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h4 class="modal-title">Float Declaration</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                    
+                        <div style="padding: 18px 18px 0 18px;">
+                            <div class="input-group">
+                                <span class="text-bg-dark input-group-text">Starting Cash (P):</span>
+                                <input id="startingCashInput" class="form-control" type="number" value="0" placeholder="Enter amount declared">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal" style="width: 100px;">Close</button>
+                    <button id="ConfirmFloatButton" class="btn btn-primary" type="button" style="width: 30%;" data-bs-target="#liveToast" data-bs-toggle="toast">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="assets/js/jquery.min.js?h=84e399b8f2181ccd73394fdeddff1638"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js?h=01bb7ae0c0b11509558f2aa83f244399"></script>
     <script src="assets/js/bs-init.js?h=e62deec2adf5671d6d2c56b275445e5c"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
-    <script src="assets/js/index.js?h=741a9a9a9198e0415aef366b3480674e"></script>
     <script src="assets/js/Simple-Slider.js?h=84b1d7cbf88bb21b37fb412ca8f94640"></script>
     <script src="assets/js/theme.js?h=79f403485707cf2617c5bc5a2d386bb0"></script>
+    <script src="assets/js-controller/profile.js"></script>
 </body>
 
 </html>

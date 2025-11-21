@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - POS System</title>
+    <meta name="twitter:description" content="The KMS POS system is a comprehensive Point of Sale solution designed for  Food &amp; Beverage (F&amp;B) businesses. It is often described as an integrated software system that manages sales transactions at the front counter while also providing powerful back-office features.">
+    <meta name="twitter:image" content="assets/img/icon.png?h=f2ceb92e0c052857785252200a79dbaa">
+    <meta name="description" content="The KMS POS system is a comprehensive Point of Sale solution designed for  Food &amp; Beverage (F&amp;B) businesses. It is often described as an integrated software system that manages sales transactions at the front counter while also providing powerful back-office features.">
+    <meta property="og:image" content="assets/img/icon.png?h=f2ceb92e0c052857785252200a79dbaa">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="KMS POS">
+    <script src="assets/js-controller/Auth.js"></script>
+    <link rel="icon" type="image/png" sizes="100x100" href="assets/img/icon.png?h=f2ceb92e0c052857785252200a79dbaa">
+    <link rel="icon" type="image/png" sizes="100x100" href="assets/img/icon.png?h=f2ceb92e0c052857785252200a79dbaa">
+    <link rel="icon" type="image/png" sizes="100x100" href="assets/img/icon.png?h=f2ceb92e0c052857785252200a79dbaa">
+    <link rel="icon" type="image/png" sizes="100x100" href="assets/img/icon.png?h=f2ceb92e0c052857785252200a79dbaa">
+    <link rel="icon" type="image/png" sizes="100x100" href="assets/img/icon.png?h=f2ceb92e0c052857785252200a79dbaa">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css?h=79ce12dbe70c189de86bb63b9da0df1f">
+    <link rel="manifest" href="manifest.json?h=fdaab650b22fce16c164e7cab4661b15">
+    <link rel="stylesheet" href="assets/css/Nunito.css?h=2667c88dfc67fc3f739be4154e73990e">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css?h=13bea3cde590997c1094f9bba14d719a">
+    <link rel="stylesheet" href="assets/css/Banner-Heading-Image-images.css?h=4f3cfa46e40e236365345fc77963f4b8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/index.css?h=98586349732e0e1cc91f5a0af7018254">
+    <link rel="stylesheet" href="assets/css/profile.css?h=fc46188ed697985a0bd85ef4c0ac5bcf">
+    <link rel="stylesheet" href="assets/css/Simple-Slider-Simple-Slider.css?h=da830b6503e0457b5735b0129f20b163">
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div class="d-flex flex-column vh-100" id="content-wrapper" style="background: #f8fbfd;">
+            <div id="content" style="position: relative;">
+
+                <nav class="navbar navbar-light navbar-expand sticky-top shadow mb-0 topbar static-top" style="height: 50px;background: var(--bs-white);">
+                    <div class="container-fluid">
+
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a aria-expanded="false" data-bs-toggle="dropdown" class="nav-link" href="pos.html">
+                                        <img class="border rounded-circle img-profile" src="assets/img/dogs/00916202501.jpg?h=5dba08c033a1ee205e43251693f1ce13" style="margin: 0;">
+                                        <span class="text-dark d-none d-lg-inline me-2 small" style="margin: 0 0 0 8px;">Kenneth Salvador</span>
+                                    </a>
+                                    <div class="dropdown-menu shadow dropdown-menu-end animated--grow-in">
+                                        <a class="dropdown-item" href="profile.html">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" class="fa-sm fa-fw me-2 text-gray-400">
+                                                <path d="M256 288c79.53 0 144-64.47 144-144s-64.47-144-144-144c-79.52 0-144 64.47-144 144S176.5 288 256 288zM351.1 320H160c-88.36 0-160 71.63-160 160c0 17.67 14.33 32 31.1 32H480c17.67 0 31.1-14.33 31.1-32C512 391.6 440.4 320 351.1 320z"></path>
+                                            </svg>&nbsp;Profile
+                                        </a>
+                                        <a class="dropdown-item" href="sessionin.html">
+                                            <i class="fas fa-lock fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Lock
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#sessionEndModal" data-bs-target="#sessionEndModal" data-bs-toggle="modal">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>&nbsp;Closing Session
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <div><!--! SEARCH INPUT -->
+                            <form class="me-auto">
+                                <div class="input-group">
+                                    <input id="searchInput" class="form-control border-0 small" type="text" placeholder="Search for ...">
+                                    <button id="searchButton" class="btn btn-dark border-white py-0" type="button" style="color: var(--bs-white);">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </nav>
+
+                <div class="container-fluid">
+
+                    <!--! CATEGORY -->
+                    <div id="product_category" class="text-nowrap hide-scrollbar" style="margin-top: 10px;overflow: auto;margin-right: -8px;margin-left: -8px;"></div>
+
+                    <!--! PRODUCT -->
+                    <div id="product_row" class="row"></div>
+
+                </div>
+            </div>
+
+            <!--! BELOW IS MENU BUTTON SHOWING WHEN ITS MOBILE DISPLAY -->
+            <button class="btn btn-primary btn-lg sideShowButton" type="button" style="bottom: 10%;right: 5px;position: absolute;" onclick="menuOrderModal();" data-bs-target="#modalCurrentOrder" data-bs-toggle="modal">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor">
+                    <path d="M13.97 2.196C22.49-1.72 32.5-.3214 39.62 5.778L80 40.39L120.4 5.778C129.4-1.926 142.6-1.926 151.6 5.778L192 40.39L232.4 5.778C241.4-1.926 254.6-1.926 263.6 5.778L304 40.39L344.4 5.778C351.5-.3214 361.5-1.72 370 2.196C378.5 6.113 384 14.63 384 24V488C384 497.4 378.5 505.9 370 509.8C361.5 513.7 351.5 512.3 344.4 506.2L304 471.6L263.6 506.2C254.6 513.9 241.4 513.9 232.4 506.2L192 471.6L151.6 506.2C142.6 513.9 129.4 513.9 120.4 506.2L80 471.6L39.62 506.2C32.5 512.3 22.49 513.7 13.97 509.8C5.456 505.9 0 497.4 0 488V24C0 14.63 5.456 6.112 13.97 2.196V2.196zM96 144C87.16 144 80 151.2 80 160C80 168.8 87.16 176 96 176H288C296.8 176 304 168.8 304 160C304 151.2 296.8 144 288 144H96zM96 368H288C296.8 368 304 360.8 304 352C304 343.2 296.8 336 288 336H96C87.16 336 80 343.2 80 352C80 360.8 87.16 368 96 368zM96 240C87.16 240 80 247.2 80 256C80 264.8 87.16 272 96 272H288C296.8 272 304 264.8 304 256C304 247.2 296.8 240 288 240H96z"></path>
+                </svg>
+            </button>
+
+        </div>
+
+        <aside class="shadow-sm p-2 vh-100 overflow-auto currentOrder" id="currentOrder" style="position: relative;">
+            <div id="menuOrder"><a class="btn btn-lg sideShowButton" role="button" style="top: 5px;left: 5px;position: absolute;" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" class="text-danger">
+                        <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                        <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path>
+                    </svg></a>
+                <div style="margin: 10px 0;padding: 0 10px;">
+                    <div class="row" style="margin: 0;">
+                        <div class="col-10 col-sm-10 col-md-10 col-lg-10 col-xl-10 col-xxl-10" style="padding: 0;">
+                            <div>
+                                <div class="row" style="margin: 0 5px;">
+                                    <div class="col-6 col-sm-7 col-md-7 col-lg-8 col-xl-8 col-xxl-8" style="padding: 0;">
+                                        <h6 class="text-uppercase text-center" style="color: var(--bs-gray-800);font-weight: bold;font-size: 12px;margin: 0;">Item</h6>
+                                    </div>
+                                    <div class="col-3 col-sm-2 col-md-1 col-lg-1 col-xl-1 col-xxl-1" style="padding: 0;">
+                                        <h6 class="fw-bold text-end text-dark" style="font-size: 12px;margin: 0;">QTY</h6>
+                                    </div>
+                                    <div class="col-3 col-sm-3 col-md-4 col-lg-3 col-xl-3 col-xxl-3" style="padding: 0;">
+                                        <h6 class="fw-bolder text-center" style="margin: 0;padding: 0;padding-left: 5px;font-size: 12px;"><span style="color: rgb(58, 59, 69);">PRICE</span><br></h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2 col-sm-2 col-lg-2 col-xxl-2 text-center" style="padding: 0;">
+                            <nav class="navbar navbar-light navbar-expand" style="padding: 0;">
+                                <div class="container-fluid">
+                                    <div class="collapse navbar-collapse" id="navcol-1">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item" style="height: 0;">
+                                                <div class="nav-item dropstart">
+                                                    <a aria-expanded="false" data-bs-toggle="dropdown" href="#">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" class="text-dark" data-bss-hover-animate="pulse" style="margin: -12px 0 0 0;">
+                                                            <path d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <div class="dropdown-menu dropdown-menu-dark fs-6 text-bg-dark" style="margin-right: 20px;">
+
+                                                        <a id="tabName" class="dropdown-item fw-bold" href="#tabOrder" style="color: var(--bs-white);"></a><hr>
+
+                                                        <a id="holdOrder" class="dropdown-item fw-bold" href="#tabOrder" style="color: var(--bs-white);">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" style="color: var(--bs-white);">
+                                                                <path d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z"></path>
+                                                            </svg>&nbsp;Tab Order
+                                                        </a>
+                                                        <a class="dropdown-item fw-bold" href="#transferTab" data-bs-target="#transferTab" data-bs-toggle="modal" style="color: var(--bs-white);">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" style="color: var(--bs-white);">
+                                                                <path d="M105.4 182.6c12.5 12.49 32.76 12.5 45.25 .001L224 109.3V352c0 17.67 14.33 32 32 32c17.67 0 32-14.33 32-32V109.3l73.38 73.38c12.49 12.49 32.75 12.49 45.25-.001c12.49-12.49 12.49-32.75 0-45.25l-128-128C272.4 3.125 264.2 0 256 0S239.6 3.125 233.4 9.375L105.4 137.4C92.88 149.9 92.88 170.1 105.4 182.6zM480 352h-160c0 35.35-28.65 64-64 64s-64-28.65-64-64H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456z"></path>
+                                                            </svg>&nbsp;Transfer Tab
+                                                        </a>
+                                                        <a class="dropdown-item fw-bold" href="#retrieveOrder" data-bs-target="#retrieveOrder" data-bs-toggle="modal" style="color: var(--bs-white);">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" style="color: var(--bs-white);">
+                                                                <path d="M105.4 182.6c12.5 12.49 32.76 12.5 45.25 .001L224 109.3V352c0 17.67 14.33 32 32 32c17.67 0 32-14.33 32-32V109.3l73.38 73.38c12.49 12.49 32.75 12.49 45.25-.001c12.49-12.49 12.49-32.75 0-45.25l-128-128C272.4 3.125 264.2 0 256 0S239.6 3.125 233.4 9.375L105.4 137.4C92.88 149.9 92.88 170.1 105.4 182.6zM480 352h-160c0 35.35-28.65 64-64 64s-64-28.65-64-64H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456z"></path>
+                                                            </svg>&nbsp;Retrieve Order
+                                                        </a>
+                                                        <a class="dropdown-item fw-bold" href="#transactionHistoryToday" data-bs-target="#transactionHistoryToday" data-bs-toggle="modal" style="color: var(--bs-white);">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor" style="color: var(--bs-white);">
+                                                                <path d="M568.2 336.3c-13.12-17.81-38.14-21.66-55.93-8.469l-119.7 88.17h-120.6c-8.748 0-15.1-7.25-15.1-15.99c0-8.75 7.25-16 15.1-16h78.25c15.1 0 30.75-10.88 33.37-26.62c3.25-20-12.12-37.38-31.62-37.38H191.1c-26.1 0-53.12 9.25-74.12 26.25l-46.5 37.74L15.1 383.1C7.251 383.1 0 391.3 0 400v95.98C0 504.8 7.251 512 15.1 512h346.1c22.03 0 43.92-7.188 61.7-20.27l135.1-99.52C577.5 379.1 581.3 354.1 568.2 336.3zM279.3 175C271.7 173.9 261.7 170.3 252.9 167.1L248 165.4C235.5 160.1 221.8 167.5 217.4 179.1s2.121 26.2 14.59 30.64l4.655 1.656c8.486 3.061 17.88 6.095 27.39 8.312V232c0 13.25 10.73 24 23.98 24s24-10.75 24-24V221.6c25.27-5.723 42.88-21.85 46.1-45.72c8.688-50.05-38.89-63.66-64.42-70.95L288.4 103.1C262.1 95.64 263.6 92.42 264.3 88.31c1.156-6.766 15.3-10.06 32.21-7.391c4.938 .7813 11.37 2.547 19.65 5.422c12.53 4.281 26.21-2.312 30.52-14.84s-2.309-26.19-14.84-30.53c-7.602-2.627-13.92-4.358-19.82-5.721V24c0-13.25-10.75-24-24-24s-23.98 10.75-23.98 24v10.52C238.8 40.23 221.1 56.25 216.1 80.13C208.4 129.6 256.7 143.8 274.9 149.2l6.498 1.875c31.66 9.062 31.15 11.89 30.34 16.64C310.6 174.5 296.5 177.8 279.3 175z"></path>
+                                                            </svg>&nbsp;Refund
+                                                        </a>
+                                                        <a class="dropdown-item fw-bold" style="color: var(--bs-white);" href="#printOrder">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" style="color: var(--bs-white);">
+                                                                <path d="M448 192H64C28.65 192 0 220.7 0 256v96c0 17.67 14.33 32 32 32h32v96c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-96h32c17.67 0 32-14.33 32-32V256C512 220.7 483.3 192 448 192zM384 448H128v-96h256V448zM432 296c-13.25 0-24-10.75-24-24c0-13.27 10.75-24 24-24s24 10.73 24 24C456 285.3 445.3 296 432 296zM128 64h229.5L384 90.51V160h64V77.25c0-8.484-3.375-16.62-9.375-22.62l-45.25-45.25C387.4 3.375 379.2 0 370.8 0H96C78.34 0 64 14.33 64 32v128h64V64z"></path>
+                                                            </svg>&nbsp;Print Order
+                                                        </a>
+                                                        <a id="deleteCurrentOrder" class="dropdown-item fw-bold" href="#deleteCurrentOrder" style="color: var(--bs-white);">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" style="color: var(--bs-white);">
+                                                                <path d="M160 400C160 408.8 152.8 416 144 416C135.2 416 128 408.8 128 400V192C128 183.2 135.2 176 144 176C152.8 176 160 183.2 160 192V400zM240 400C240 408.8 232.8 416 224 416C215.2 416 208 408.8 208 400V192C208 183.2 215.2 176 224 176C232.8 176 240 183.2 240 192V400zM320 400C320 408.8 312.8 416 304 416C295.2 416 288 408.8 288 400V192C288 183.2 295.2 176 304 176C312.8 176 320 183.2 320 192V400zM317.5 24.94L354.2 80H424C437.3 80 448 90.75 448 104C448 117.3 437.3 128 424 128H416V432C416 476.2 380.2 512 336 512H112C67.82 512 32 476.2 32 432V128H24C10.75 128 0 117.3 0 104C0 90.75 10.75 80 24 80H93.82L130.5 24.94C140.9 9.357 158.4 0 177.1 0H270.9C289.6 0 307.1 9.358 317.5 24.94H317.5zM151.5 80H296.5L277.5 51.56C276 49.34 273.5 48 270.9 48H177.1C174.5 48 171.1 49.34 170.5 51.56L151.5 80zM80 432C80 449.7 94.33 464 112 464H336C353.7 464 368 449.7 368 432V128H80V432z"></path>
+                                                            </svg>&nbsp;Clear Tab
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="currentOrderRow" class="hide-scrollbar" style="margin: 0;padding: 10px 10px 0 10px;overflow: auto;height: calc(100vh - 349px);border-top-style: solid;border-bottom-style: solid;">
+                    <!--! CURRENT ORDER -->
+                </div>
+
+                <div style="position: absolute; width: 95%; bottom:0;">
+                    <div class="row" style="margin: 20px;">
+                        <div class="col-2 col-sm-3 col-md-2 col-lg-2 col-xl-2 col-xxl-3 align-self-center" style="padding: 0;">
+                            <h6 class="fw-bold text-primary" style="margin-bottom: 0;margin-left: -15px;">Dine-In</h6>
+                        </div>
+                        <div class="col-5 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-4 align-self-center" style="padding: 0;">
+                            <h6 class="fw-bold text-end text-secondary" style="margin: 0;">&nbsp;Sub Total</h6>
+                        </div>
+                        <div class="col-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5" style="padding: 0;">
+                            <h4 class="fw-bold text-end text-success" style="margin: 0;">&nbsp;P 2,100</h4>
+                        </div>
+                    </div>
+                    <div>
+                        <ul class="nav nav-tabs nav-fill" role="tablist">
+                            <li class="nav-item" role="presentation"><a class="nav-link active link-secondary" role="tab" data-bs-toggle="tab" href="#chargeTab" style="font-size: 12px;">Charge</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link link-secondary" role="tab" data-bs-toggle="tab" href="#discountTab" style="font-size: 12px;">Discount</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link link-secondary" role="tab" data-bs-toggle="tab" href="#serviceTab" style="font-size: 12px;">Service</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" role="tabpanel" id="chargeTab" style="height: 191.141px;">
+                                <div>
+                                    <div class="row" style="margin: 0;">
+                                        <div class="col" style="padding: 0;margin: 10px 5px 10px 0;">
+                                            <div class="card text-secondary border-secondary" data-bss-hover-animate="pulse" style="color: var(--bs-orange);border-style: solid;border-color: var(--bs-orange);">
+                                                <div class="card-body" style="padding: 6px 0;">
+                                                    <h6 class="fw-bolder text-center card-title" style="margin: 0;">P20</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col" style="padding: 0;margin: 10px 5px 10px 0;">
+                                            <div class="card text-secondary border-secondary" data-bss-hover-animate="pulse">
+                                                <div class="card-body" style="padding: 6px 0;">
+                                                    <h6 class="fw-bolder text-center card-title" style="margin: 0;">P50</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col" style="padding: 0;margin: 10px 5px 10px 0;">
+                                            <div class="card text-secondary border-secondary" data-bss-hover-animate="pulse">
+                                                <div class="card-body" style="padding: 6px 0;">
+                                                    <h6 class="fw-bolder text-center card-title" style="margin: 0;">P100</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col" style="padding: 0;margin: 10px 0 10px 0;margin-bottom: 0;">
+                                            <div class="card text-secondary border-secondary" data-bss-hover-animate="pulse">
+                                                <div class="card-body" style="padding: 6px 0;">
+                                                    <h6 class="fw-bolder text-center card-title" style="margin: 0;">P500</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row" style="margin: 0;">
+                                        <div class="col" style="padding: 0;margin: 0 5px 5px 0;">
+                                            <div class="card text-secondary border-secondary" data-bss-hover-animate="pulse">
+                                                <div class="card-body" style="padding: 6px 0;">
+                                                    <h6 class="fw-bolder text-center card-title" style="margin: 0;">P1000</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col" style="padding: 0;margin: 0 5px 5px 0;">
+                                            <div class="card text-secondary border-secondary" data-bss-hover-animate="pulse">
+                                                <div class="card-body" style="padding: 6px 0;">
+                                                    <h6 class="fw-bolder text-center card-title" style="margin: 0;">Exact</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col" style="padding: 0;margin: 0 5px 5px 0;"><a href="#" data-bs-target="#customAmount" data-bs-toggle="modal" style="text-decoration:none;">
+                                                <div class="card text-secondary border-secondary" data-bss-hover-animate="pulse">
+                                                    <div class="card-body" style="padding: 6px 0;">
+                                                        <h6 class="fw-bolder text-center card-title" style="margin: 0;">Custom</h6>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+                                        <div class="col" style="padding: 0;margin: 0 0 5px 0;margin-bottom: 0;">
+                                            <div class="card text-secondary border-secondary" data-bss-hover-animate="pulse">
+                                                <div class="card-body" style="padding: 6px 0;">
+                                                    <h6 class="fw-bolder text-center card-title" style="margin: 0;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor">
+                                                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                                            <path d="M576 384C576 419.3 547.3 448 512 448H205.3C188.3 448 172 441.3 160 429.3L9.372 278.6C3.371 272.6 0 264.5 0 256C0 247.5 3.372 239.4 9.372 233.4L160 82.75C172 70.74 188.3 64 205.3 64H512C547.3 64 576 92.65 576 128V384zM271 208.1L318.1 256L271 303C261.7 312.4 261.7 327.6 271 336.1C280.4 346.3 295.6 346.3 304.1 336.1L352 289.9L399 336.1C408.4 346.3 423.6 346.3 432.1 336.1C442.3 327.6 442.3 312.4 432.1 303L385.9 256L432.1 208.1C442.3 199.6 442.3 184.4 432.1 175C423.6 165.7 408.4 165.7 399 175L352 222.1L304.1 175C295.6 165.7 280.4 165.7 271 175C261.7 184.4 261.7 199.6 271 208.1V208.1z"></path>
+                                                        </svg></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div style="padding: 0 16px;margin-top: 10px;">
+                                    <div class="row">
+                                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3" style="padding: 0;">
+                                            <h6 class="fw-bold text-end" style="margin: 0;">Discount</h6>
+                                            <h6 class="fw-bold text-end text-success" style="margin: 0;">Total</h6>
+                                        </div>
+                                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3" style="padding: 0;">
+                                            <h6 class="fw-bold text-end" style="margin: 0;">P0</h6>
+                                            <h6 class="fw-bold text-end text-success" style="margin: 0;">P0</h6>
+                                        </div>
+                                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3" style="padding: 0;">
+                                            <h6 class="fw-bold text-end" style="margin: 0;">Received</h6>
+                                            <h6 class="fw-bold text-end text-primary" style="margin: 0;">Change</h6>
+                                        </div>
+                                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3" style="padding: 0;">
+                                            <h6 class="fw-bold text-end" style="margin: 0;">P0</h6>
+                                            <h6 class="fw-bold text-end text-primary" style="margin: 0;">P0</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="row" style="margin: 0;">
+                                        <div class="col-2 col-sm-2 col-md-3 col-lg-2 col-xl-2 col-xxl-2" style="padding: 0;margin: 10px 5px 5px 0;"><a class="text-decoration-none" href="#gcashPayment" data-bs-target="#gcashPayment" data-bs-toggle="modal">
+                                                <div class="card text-white bg-primary" data-bss-hover-animate="pulse">
+                                                    <div class="card-body" style="padding: 10px;">
+                                                        <h6 class="fw-bolder text-center card-title" style="margin: 0;font-size: 12px;">Gcash</h6>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+                                        <div class="col-2 col-sm-2 col-md-3 col-lg-2 col-xl-2 col-xxl-2" style="padding: 0;margin: 10px 5px 5px 0;"><a class="text-decoration-none" href="#creditPayment" data-bs-target="#creditPayment" data-bs-toggle="modal">
+                                                <div class="card text-white bg-danger" data-bss-hover-animate="pulse">
+                                                    <div class="card-body" style="padding: 10px;">
+                                                        <h6 class="fw-bolder text-center card-title" style="margin: 0;font-size: 12px;">Credit</h6>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+                                        <div class="col-2 col-sm-2 col-md-3 col-lg-2 col-xl-2 col-xxl-2" style="padding: 0;margin: 10px 5px 5px 0;"><a class="text-decoration-none" href="#cardPayment" data-bs-target="#cardPayment" data-bs-toggle="modal">
+                                                <div class="card text-white bg-warning" data-bss-hover-animate="pulse">
+                                                    <div class="card-body" style="padding: 10px;">
+                                                        <h6 class="fw-bolder text-center card-title" style="margin: 0;font-size: 12px;">Card</h6>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+                                        <div class="col" style="padding: 0;margin: 10px 0 5px 0;"><a class="text-decoration-none" href="#" onclick="finishOrder();">
+                                                <div class="card text-white bg-success" data-bss-hover-animate="pulse">
+                                                    <div class="card-body" style="padding: 10px;">
+                                                        <h6 class="fw-bolder text-center card-title" style="margin: 0;font-size: 12px;">CASH</h6>
+                                                    </div>
+                                                </div>
+                                            </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" role="tabpanel" id="discountTab" style="height: 191.141px;padding: 12px;overflow: auto;">
+                                <div class="row" style="margin-bottom: 12px;">
+                                    <div class="col-9 align-self-center">
+                                        <p class="fw-bold" style="margin: 0;">Details ( 12% )</p>
+                                    </div>
+                                    <div class="col-3 col-xxl-3"><button class="btn btn-primary btn-sm" type="button" data-bs-target="#discountModal" data-bs-toggle="modal">Custom</button></div>
+                                </div>
+                                <div class="row" style="margin: 0;margin-bottom: 12px;">
+                                    <div class="col-6">
+                                        <p style="margin: 0;font-size: 14px;">Senior Citizen</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p style="margin: 0;font-size: 14px;">Juan Dela Cruz</p>
+                                        <p style="margin: 0;font-size: 14px;">123456</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p style="margin: 0;font-size: 14px;">Total Disc.</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="fw-bold text-warning" style="font-size: 16px;">P105</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="fw-bold" style="text-decoration:  underline;">Item</p>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin: 0;">
+                                    <div class="col">
+                                        <p class="text-dark" style="margin: 0;font-size: 14px;">Chocolate Cake</p>
+                                    </div>
+                                    <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1">
+                                        <p class="text-center" style="margin: 0;font-size: 14px;">1</p>
+                                    </div>
+                                    <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                                        <p class="text-end" style="margin: 0;font-size: 14px;">12%</p>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin: 0;">
+                                    <div class="col">
+                                        <p class="text-dark" style="margin: 0;font-size: 14px;">Chocolate Cake</p>
+                                    </div>
+                                    <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1">
+                                        <p class="text-center" style="margin: 0;font-size: 14px;">1</p>
+                                    </div>
+                                    <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                                        <p class="text-end" style="margin: 0;font-size: 14px;">P25</p>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin: 0;">
+                                    <div class="col">
+                                        <p class="text-dark" style="margin: 0;font-size: 14px;">Chocolate Cake</p>
+                                    </div>
+                                    <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1">
+                                        <p class="text-center" style="margin: 0;font-size: 14px;">1</p>
+                                    </div>
+                                    <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+                                        <p class="text-end" style="margin: 0;font-size: 14px;">10%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" role="tabpanel" id="serviceTab" style="height: 191.141px;padding: 12px;">
+                                <div class="row" style="margin-bottom: 12px;">
+                                    <div class="col-9 align-self-center">
+                                        <p class="fw-bold" style="margin: 0;">Details ( 5% )</p>
+                                    </div>
+                                    <div class="col-3 col-xxl-3"><button class="btn btn-primary btn-sm" type="button" data-bs-target="#serviceChargeModal" data-bs-toggle="modal">Custom</button></div>
+                                </div>
+                                <div class="row" style="margin: 0;margin-bottom: 12px;">
+                                    <div class="col-6">
+                                        <p style="margin: 0;font-size: 14px;">Total Charge</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="fw-bold text-success" style="font-size: 16px;">P105</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-none" id="finishOrder" style="padding: 0 20px;">
+                <div class="text-end" style="padding: 10px 0;margin: 0;"><a href="#" onclick="closedFinishOrder();" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" class="fs-3 text-danger">
+                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path>
+                        </svg></a></div>
+                <div class="text-center"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" class="text-success" style="font-size: 60px;">
+                        <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                        <path d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM371.8 211.8C382.7 200.9 382.7 183.1 371.8 172.2C360.9 161.3 343.1 161.3 332.2 172.2L224 280.4L179.8 236.2C168.9 225.3 151.1 225.3 140.2 236.2C129.3 247.1 129.3 264.9 140.2 275.8L204.2 339.8C215.1 350.7 232.9 350.7 243.8 339.8L371.8 211.8z"></path>
+                    </svg>
+                    <h4 class="fw-semibold text-dark" style="margin-top: 35px;margin-bottom: 0;">Total P2,300</h4>
+                    <p style="font-size: 10px;">10:14pm, 9 Nov 2025</p>
+                    <h6 class="fw-semibold text-dark" style="margin: 0;">Change P200</h6>
+                </div>
+                <div style="margin: 50px 0;">
+                    <div class="input-group"><input class="form-control" type="email" placeholder="Enter Email Address"><button class="btn btn-secondary" type="button">Send</button></div>
+                </div>
+                <div><button class="btn btn-secondary btn-lg" type="button" style="width: 100%;margin-bottom: 50px;">Print Kitchen Note</button><button class="btn btn-primary btn-lg" type="button" style="width: 100%;">Print Receipt</button></div>
+                <div style="margin: 70px 0 10px 0;">
+                    <p class="text-center" style="margin-bottom: 24px;">Receipt Details</p>
+                    <div>
+                        <div class="row" style="margin-bottom: 5px;margin-right: 0;">
+                            <div class="col">
+                                <p class="fw-semibold text-dark" style="margin: 0;">Chocolate Cake</p>
+                                <p style="margin: 0;font-size: 12px;">Venti, 50% More Ice, Coffee Jelly</p>
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1" style="padding: 0;">
+                                <p class="text-end text-dark" style="margin: 0;font-size: 12px;">2</p>
+                            </div>
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3" style="padding: 0;">
+                                <p class="text-end text-dark" style="margin: 0;font-size: 12px;">P 300</p>
+                            </div>
+                        </div>
+                        <div class="row" style="margin-bottom: 5px;margin-right: 0;">
+                            <div class="col">
+                                <p class="fw-semibold text-dark" style="margin: 0;">Chocolate Cake</p>
+                                <p style="margin: 0;font-size: 12px;">Venti, 50% More Ice, Coffee Jelly</p>
+                            </div>
+                            <div class="col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1" style="padding: 0;">
+                                <p class="text-end text-dark" style="margin: 0;font-size: 12px;">2</p>
+                            </div>
+                            <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3" style="padding: 0;">
+                                <p class="text-end text-dark" style="margin: 0;font-size: 12px;">P 300</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+    <div class="modal" role="dialog" tabindex="-1" id="customAmount">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-body border rounded" style="background: rgb(248,249,252);padding: 12px;">
+                    <div class="container" style="padding: 0;">
+                        <div class="row" style="margin: 0;">
+                            <div class="col-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" style="padding: 0;">
+                                <div class="text-center border rounded shadow-sm" style="margin-bottom: 4px;background: var(--bs-white);">
+                                    <h1 class="fw-semibold text-success" style="margin: 0;padding: 13.5px;">&nbsp;0.00</h1>
+                                </div>
+                                <div style="border-width: 1px;margin-bottom: 8px;">
+                                    <div></div>
+                                    <div class="card shadow-sm">
+                                        <div class="card-body" style="padding: 0;">
+                                            <div class="row row-cols-4" style="margin: 0;">
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder border rounded-0" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">7</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder border rounded-0" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">8</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder border rounded-0" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">9</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder link-warning border rounded-0 border-warning" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">+20</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder border rounded-0" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">4</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder border rounded-0" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">5</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder border rounded-0" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">6</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder link-danger border rounded-0 border-danger" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">+50</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder border rounded-0" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">1</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder border rounded-0" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">2</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder border rounded-0" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">3</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder link-primary border rounded-0 border-primary" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">+100</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn btn-warning fw-bolder border rounded-0" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">C</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder border rounded-0" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">0</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder border rounded-0" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">.</button></div>
+                                                <div class="col" style="padding: 0;"><button class="btn fw-bolder link-success border rounded-0 border-success" type="button" style="width: 100%;border-style: solid;border-color: var(--bs-gray-400);height: 75px;">+200</button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><button class="btn btn-secondary border rounded-0 shadow-sm" id="closedCustomAmountModal" type="button" data-bs-dismiss="modal" style="width: 50%;font-weight: bold;height: 75px;">Cancel</button><button class="btn btn-light text-bg-primary border rounded-0 shadow-sm" type="button" style="width: 50%;background: rgb(255,255,255);color: var(--bs-gray);font-weight: bold;height: 75px;">Enter</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" role="dialog" tabindex="-1" id="modalCurrentOrder">
+        <div class="modal-dialog modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div id="menuOrderModal"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" role="dialog" tabindex="-1" id="editProductModal">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 class="fw-bolder text-center text-dark" style="margin: 0;">Spanish Latte</h4>
+                    <p class="text-center" style="font-size: 12px;">Large, 50%, More Ice, Coffee Jelly</p>
+                    <hr>
+                    <div>
+                        <div class="row">
+                            <div class="col">
+                                <div style="margin-bottom: 20px;">
+                                    <h5 class="fw-bold text-dark">Quantity</h5>
+                                    <div class="input-group input-group-sm" style="margin: 0 0 10px;"><button class="btn btn-dark" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" style="font-size: 25px;">
+                                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                                <path d="M400 288h-352c-17.69 0-32-14.32-32-32.01s14.31-31.99 32-31.99h352c17.69 0 32 14.3 32 31.99S417.7 288 400 288z"></path>
+                                            </svg></button><input class="form-control" type="number" value="1" style="text-align: center;font-size: 20px;"><button class="btn btn-success" type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" class="text-white" style="font-size: 25px;">
+                                                <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                                <path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z"></path>
+                                            </svg></button></div>
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <h5 class="fw-bold text-dark">Discount Amount Php.</h5>
+                                    <div class="input-group input-group-sm" style="margin: 0 0 10px;"><button class="btn btn-dark fw-semibold" type="button" style="font-size: 20px;">-10</button><button class="btn btn-dark fw-semibold" type="button" style="font-size: 20px;">-1</button><input class="form-control" type="number" style="text-align: center;font-size: 20px;" value="0"><button class="btn btn-success fw-semibold link-light" type="button" style="font-size: 20px;">+1</button><button class="btn btn-success fw-semibold link-light" type="button" style="font-size: 20px;">+10</button></div>
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <h5 class="fw-bold text-dark">Discount %</h5>
+                                    <div class="input-group input-group-sm" style="margin: 0 0 10px;"><button class="btn btn-dark fw-semibold" type="button" style="font-size: 20px;">-10</button><button class="btn btn-dark fw-semibold" type="button" style="font-size: 20px;">-1</button><input class="form-control" type="number" value="0" style="text-align: center;font-size: 20px;"><button class="btn btn-success fw-semibold link-light" type="button" style="font-size: 20px;">+1</button><button class="btn btn-success fw-semibold link-light" type="button" style="font-size: 20px;">+10</button></div>
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <div class="input-group" style="margin: 0 0 10px;"><textarea class="form-control" placeholder="e.g. No salt" rows="3"></textarea></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center"><button class="btn btn-secondary" id="closedEditProductModal-1" type="button" data-bs-dismiss="modal" style="width: 20%;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" style="margin: -4px;">
+                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path>
+                        </svg>&nbsp;Cancel</button><button class="btn btn-danger" type="button" style="width: 20%;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" style="font-size: 16px;margin-top: -4px;">
+                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM31.1 128H416V448C416 483.3 387.3 512 352 512H95.1C60.65 512 31.1 483.3 31.1 448V128zM111.1 208V432C111.1 440.8 119.2 448 127.1 448C136.8 448 143.1 440.8 143.1 432V208C143.1 199.2 136.8 192 127.1 192C119.2 192 111.1 199.2 111.1 208zM207.1 208V432C207.1 440.8 215.2 448 223.1 448C232.8 448 240 440.8 240 432V208C240 199.2 232.8 192 223.1 192C215.2 192 207.1 199.2 207.1 208zM304 208V432C304 440.8 311.2 448 320 448C328.8 448 336 440.8 336 432V208C336 199.2 328.8 192 320 192C311.2 192 304 199.2 304 208z"></path>
+                        </svg>&nbsp;Void</button><button class="btn btn-primary" type="button" style="width: 50%;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-32 0 512 512" width="1em" height="1em" fill="currentColor" style="margin-top: -4px;">
+                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M384 32C419.3 32 448 60.65 448 96V416C448 451.3 419.3 480 384 480H64C28.65 480 0 451.3 0 416V96C0 60.65 28.65 32 64 32H384zM224 368C237.3 368 248 357.3 248 344V280H312C325.3 280 336 269.3 336 256C336 242.7 325.3 232 312 232H248V168C248 154.7 237.3 144 224 144C210.7 144 200 154.7 200 168V232H136C122.7 232 112 242.7 112 256C112 269.3 122.7 280 136 280H200V344C200 357.3 210.7 368 224 368z"></path>
+                        </svg>&nbsp;Update</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!--PRODUCT VARIANT MODAL -->
+    <div class="modal" role="dialog" tabindex="-1" id="productVariantModal">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 id="variant_name" class="fw-bolder text-center text-dark">Spanish latte</h4>
+                    <hr style="margin: 16px 0 25px 0;">
+
+                    <div class="row" style="margin: 0 -12px 20px -12px;">
+                        <div class="col">
+                            <h6 class="fw-bolder text-dark">Option</h6> <!--OPTION -->
+                            <div id="variant_div" class="text-nowrap btn-group-sm hide-scrollbar" role="group" aria-label="Basic radio toggle button group" style="overflow: auto;"></div>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="row" style="margin: 0 -12px 20px -12px;">
+                        <div class="col">
+                            <h6 class="fw-bolder text-dark">Sugar Level</h6>
+                            <div class="text-nowrap btn-group-sm hide-scrollbar" role="group" aria-label="Basic radio toggle button group" style="height: 64px;overflow: auto;"><input type="radio" id="btnradio-1" class="btn-check" autocomplete="off" name="SugarLevel"><label class="form-label btn btn-outline-dark" for="btnradio-1" style="margin: 0 3px 5px 0;padding: 18px 0;width: 70px;">0%</label><input type="radio" id="btnradio-2" class="btn-check" autocomplete="off" name="SugarLevel"><label class="form-label btn btn-outline-dark" for="btnradio-2" style="margin: 0 3px 5px 0;padding: 18px 0;width: 70px;">25%</label><input type="radio" id="btnradio-3" class="btn-check" autocomplete="off" name="SugarLevel"><label class="form-label btn btn-outline-dark" for="btnradio-3" style="margin: 0 3px 5px 0;padding: 18px 0;width: 70px;">50%</label><input type="radio" id="btnradio-4" class="btn-check" autocomplete="off" name="SugarLevel"><label class="form-label btn btn-outline-dark" for="btnradio-4" style="margin: 0 3px 5px 0;padding: 18px 0;width: 70px;">75%</label><input type="radio" id="btnradio-5" class="btn-check" autocomplete="off" name="SugarLevel" checked=""><label class="form-label btn btn-outline-dark" for="btnradio-5" style="margin: 0 3px 5px 0;padding: 18px 0;width: 70px;">100%</label></div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin: 0 -12px 20px -12px;">
+                        <div class="col">
+                            <h6 class="fw-bolder text-dark">Ice Level</h6>
+                            <div class="text-nowrap btn-group-sm hide-scrollbar" role="group" aria-label="Basic radio toggle button group" style="height: 64px;overflow: auto;"><input type="radio" id="IceLevel1" class="btn-check" autocomplete="off" name="IceLevel"><label class="form-label btn btn-outline-dark" for="IceLevel1" style="margin: 0 3px 5px 0;padding: 18px 0;width: 110px;">Less Ice</label><input type="radio" id="IceLevel2" class="btn-check" autocomplete="off" name="IceLevel" checked=""><label class="form-label btn btn-outline-dark" for="IceLevel2" style="margin: 0 3px 5px 0;padding: 18px 0;width: 110px;">Normal Ice</label><input type="radio" id="IceLevel3" class="btn-check" autocomplete="off" name="IceLevel"><label class="form-label btn btn-outline-dark" for="IceLevel3" style="margin: 0 3px 5px 0;padding: 18px 0;width: 110px;">More Ice</label></div>
+                        </div>
+                    </div>
+
+                    <div class="row" style="margin: 0 -12px;">
+                        <div class="col">
+                            <h6 class="fw-bolder text-dark">Add Ons</h6>
+                            <div class="text-nowrap btn-group-sm hide-scrollbar" role="group" aria-label="Basic checkbox toggle button group" style="overflow: auto;height: 64px;"><input type="checkbox" id="addOns1" class="btn-check" autocomplete="off"><label class="form-label btn btn-outline-dark" for="addOns1" style="margin: 0 3px 0 0;padding: 18px 0;width: 150px;">Pearl ( +15 )</label><input type="checkbox" id="addOns2" class="btn-check" autocomplete="off"><label class="form-label btn btn-outline-dark" for="addOns2" style="margin: 0 3px 0 0;padding: 18px 0;width: 150px;">Nata&nbsp;( +15 )<br></label><input type="checkbox" id="addOns3" class="btn-check" autocomplete="off"><label class="form-label btn btn-outline-dark" for="addOns3" style="margin: 0 3px 0 0;padding: 18px 0;width: 150px;">Coffee Jelly ( +15 )</label></div>
+                        </div>
+                    </div>
+                    -->
+                </div>
+                <div class="modal-footer justify-content-center" style="padding: 12px 0;">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal" style="width: 45%;">Cancel</button>
+                    <button id="productVariantModalButton" class="btn btn-primary" type="button" data-bs-dismiss="modal" style="width: 45%;">ADD ORDER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB ORDER MODAL -->
+    <div class="modal" role="dialog" tabindex="-1" id="tabOrder">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h4 class="modal-title text-white">Tab Order</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group" style="margin-bottom: 10px;">
+                        <select id="tabSelectName" class="form-select form-select-lg" style="color: var(--bs-blue);font-weight: bold;">
+                            <option value="Table" selected="">Table</option>
+                            <option value="Takeout">Takeout</option>
+                            <option value="Customer">Customer</option>
+                            <option value="Hold">Hold</option>
+                        </select>
+                    </div>
+                    <div class="input-group" style="margin-bottom: 10px;">
+                        <select id="tabSelectNum" class="form-select form-select-lg" style="color: var(--bs-blue);font-weight: bold;">
+                            <option value="1" selected="">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary btn-lg" type="button" data-bs-dismiss="modal" style="width: 48%;">Cancel</button>
+                    <button onclick="tabOrder()" class="btn btn-primary btn-lg" type="button" data-bs-dismiss="modal" style="width: 48%;">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--! TRANSFER TAB MODAL -->
+    <div class="modal" role="dialog" tabindex="-1" id="transferTab">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h4 class="modal-title text-white">Transfer Tab</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col align-self-center">
+                            <h4 id="transferTabName" class="fw-bold text-dark">Table 1&nbsp;&nbsp;</h4>
+                        </div>
+                        <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2 align-self-center">
+                            <h4 class="fw-bold text-center text-dark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor">
+                                    <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                                    <path d="M502.6 278.6l-128 128c-12.51 12.51-32.76 12.49-45.25 0c-12.5-12.5-12.5-32.75 0-45.25L402.8 288H32C14.31 288 0 273.7 0 255.1S14.31 224 32 224h370.8l-73.38-73.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l128 128C515.1 245.9 515.1 266.1 502.6 278.6z"></path>
+                                </svg>&nbsp;</h4>
+                        </div>
+                        <div class="col">
+                            <div class="input-group" style="margin-bottom: 10px;"><select class="form-select form-select-lg" style="color: var(--bs-blue);font-weight: bold;">
+                                    <option value="13" selected="">Table</option>
+                                    <option value="14">Takeout</option>
+                                    <option value="12">Customer</option>
+                                    <option value="15">Hold</option>
+                                </select></div>
+                            <div class="input-group" style="margin-bottom: 10px;"><select class="form-select form-select-lg" style="color: var(--bs-blue);font-weight: bold;">
+                                    <option value="12" selected="">1</option>
+                                    <option value="13">2</option>
+                                    <option value="14">3</option>
+                                    <option value="14">4</option>
+                                </select></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-secondary btn-lg" type="button" data-bs-dismiss="modal" style="width: 48%;">Cancel</button><button class="btn btn-primary btn-lg" type="button" style="width: 48%;">Transfer</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RETRIEVE ORDER! -->
+    <div class="modal" role="dialog" tabindex="-1" id="retrieveOrder">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h4 id="retrieveOrderHeading" class="modal-title fw-bold text-white"></h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Order Name</th>
+                                    <th>Total</th>
+                                    <th>Items</th>
+                                    <th>Time Held</th>
+                                    <th class="text-center">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="retrieveOrderTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" role="dialog" tabindex="-1" id="transactionHistoryToday">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark"><a class="fs-4 fw-bold" href="#" style="margin: 0 10px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1em" height="1em" fill="currentColor" class="text-warning">
+                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM384 288H205.3l49.38 49.38c12.5 12.5 12.5 32.75 0 45.25s-32.75 12.5-45.25 0L105.4 278.6C97.4 270.7 96 260.9 96 256c0-4.883 1.391-14.66 9.398-22.65l103.1-103.1c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L205.3 224H384c17.69 0 32 14.33 32 32S401.7 288 384 288z"></path>
+                        </svg></a>
+                    <h4 class="modal-title fw-bold text-white">Transactions Today (4)</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="input-group shadow-sm" style="margin-bottom: 18px;"><input class="shadow-sm form-control border-0 small" type="text" placeholder="Search for ..."><button class="btn btn-dark border-white py-0" type="button" style="color: var(--bs-white);"><i class="fas fa-search"></i></button></div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Invoice Number</th>
+                                        <th>Total</th>
+                                        <th>Items</th>
+                                        <th>Date</th>
+                                        <th class="text-center">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="table-light fw-bold text-dark">2511072</td>
+                                        <td>P 2,100</td>
+                                        <td>6</td>
+                                        <td>11-07-2025 8:11:04 PM</td>
+                                        <td class="text-center">
+                                            <div class="btn-group" role="group"><button class="btn btn-primary" type="button" style="width: 100px;">View</button></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-light fw-bold text-dark">2511072</td>
+                                        <td>P 2,100</td>
+                                        <td>6</td>
+                                        <td>11-07-2025 8:11:04 PM</td>
+                                        <td class="text-center">
+                                            <div class="btn-group" role="group"><button class="btn btn-primary" type="button" style="width: 100px;">View</button></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-light fw-bold text-dark">2511072</td>
+                                        <td>P 2,100</td>
+                                        <td>6</td>
+                                        <td>11-07-2025 8:11:04 PM</td>
+                                        <td class="text-center">
+                                            <div class="btn-group" role="group"><button class="btn btn-primary" type="button" style="width: 100px;">View</button></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="table-light fw-bold text-dark">2511072</td>
+                                        <td>P 2,100</td>
+                                        <td>6</td>
+                                        <td>11-07-2025 8:11:04 PM</td>
+                                        <td class="text-center">
+                                            <div class="btn-group" role="group"><button class="btn btn-primary" type="button" style="width: 100px;">View</button></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="d-none">
+                        <div style="padding: 12px;">
+                            <div class="row">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <h6 class="fw-bold text-dark">Invoice Number :</h6>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                                    <h6 class="fw-bold">2511071</h6>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-2 col-xl-2 col-xxl-2">
+                                    <h6 class="fw-bold text-dark">Date :</h6>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                                    <h6 class="fw-bold">Nov 7, 2025 8:11:04 PM<br></h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <h6 class="fw-bold text-dark">Items :</h6>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                                    <h6 class="fw-bold">7</h6>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-2 col-xl-2 col-xxl-2">
+                                    <h6 class="fw-bold text-dark">Total :</h6>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4">
+                                    <h6 class="fw-bold">P2,100<br></h6>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <h6 class="fw-bold text-dark">Total Refund Due :</h6>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+                                    <h5 class="fw-bold text-danger">P2,100<br></h5>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-2 col-xl-2 col-xxl-2">
+                                    <h6 class="fw-bold text-dark">Action:</h6>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 col-xxl-4"><button class="btn btn-danger btn-sm" type="button" style="padding: 4px 12px;">Confirm Refund</button></div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Orig. Qty</th>
+                                        <th>Price/item</th>
+                                        <th>Qty to Refund</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="fw-bold text-dark">
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Chocolate Cake</label></div>
+                                            <p class="fw-normal text-secondary" style="font-size: 12px;">Venti, 50%, More Ice, Coffee Jelly</p>
+                                        </td>
+                                        <td>5</td>
+                                        <td>P300</td>
+                                        <td>
+                                            <div class="input-group input-group-sm justify-content-center"><button class="btn btn-dark" type="button" style="padding: 4px 10px;">-</button><span class="input-group-text" style="padding: 4px 10px;">1</span><button class="btn btn-success link-light" type="button" style="padding: 4px 10px;">+</button></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="fw-bold text-dark">
+                                            <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2" checked=""><label class="form-check-label" for="formCheck-2">Chocolate Cake</label></div>
+                                            <p class="fw-normal text-secondary" style="font-size: 12px;">Venti, 100%, More Ice, Coffee Jelly</p>
+                                        </td>
+                                        <td>2</td>
+                                        <td>P300</td>
+                                        <td>
+                                            <div class="input-group input-group-sm justify-content-center"><button class="btn btn-dark" type="button" style="padding: 4px 10px;">-</button><span class="input-group-text" style="padding: 4px 10px;">1</span><button class="btn btn-success link-light" type="button" style="padding: 4px 10px;">+</button></div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" role="dialog" tabindex="-1" id="adminPass">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-bg-danger" style="padding: 8px 16px;">
+                    <h4 class="modal-title">Confirmation</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">Are you sure to void this Orders?</p>
+                    <div class="input-group"><input class="form-control" type="password" placeholder="Security Key"><button class="btn btn-primary" type="button" style="padding: 6px 32px;">Enter</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" role="dialog" tabindex="-1" id="gcashPayment">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-bg-primary">
+                    <h4 class="modal-title">Gcash Payment</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="padding: 36px;">
+                    <h4 class="fw-bold text-center text-dark" style="margin-top: -20px;">Total P2,100</h4>
+                    <div class="input-group"><input class="form-control" type="text" placeholder="Reference Number" readonly="" style="margin-bottom: 20px;"></div>
+                    <div class="shadow-sm">
+                        <div class="row" style="margin: 0;">
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">7</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">8</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">9</button></div>
+                        </div>
+                        <div class="row" style="margin: 0;">
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">4</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">5</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">6</button></div>
+                        </div>
+                        <div class="row" style="margin: 0;">
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">1</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">2</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">3</button></div>
+                        </div>
+                        <div class="row" style="margin: 0;">
+                            <div class="col" style="padding: 0;"><button class="btn btn-secondary fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;" data-bs-dismiss="modal">Cancel</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">0</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-primary fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">Confirm</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" role="dialog" tabindex="-1" id="cardPayment">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-white text-bg-warning">
+                    <h4 class="modal-title">Card/Debit Payment</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="padding: 36px;">
+                    <h4 class="fw-bold text-center text-dark" style="margin-top: -20px;">Total P2,100</h4>
+                    <div class="input-group"><input class="form-control" type="text" placeholder="Approval / Auth Code" readonly="" style="margin-bottom: 20px;"></div>
+                    <div class="input-group"><input class="form-control" type="text" placeholder="Last 4 Digits of Card" readonly="" style="margin-bottom: 20px;"></div>
+                    <div class="shadow-sm">
+                        <div class="row" style="margin: 0;">
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">7</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">8</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">9</button></div>
+                        </div>
+                        <div class="row" style="margin: 0;">
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">4</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">5</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">6</button></div>
+                        </div>
+                        <div class="row" style="margin: 0;">
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">1</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">2</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">3</button></div>
+                        </div>
+                        <div class="row" style="margin: 0;">
+                            <div class="col" style="padding: 0;"><button class="btn btn-secondary fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;" data-bs-dismiss="modal">Cancel</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-light fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">0</button></div>
+                            <div class="col" style="padding: 0;"><button class="btn btn-primary fw-bold border rounded-0" type="button" style="width: 100%;padding: 20px;">Confirm</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" role="dialog" tabindex="-1" id="creditPayment">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-white text-bg-primary">
+                    <h4 class="modal-title">Credit Payment</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="padding: 36px;">
+                    <h4 class="fw-bold text-center text-dark" style="margin-top: -20px;">Total P2,100</h4>
+                    <div class="input-group"><input class="form-control" type="text" placeholder="Customer Name" style="margin-bottom: 20px;"></div>
+                    <div class="input-group"><select class="form-select" style="height: 38px;">
+                            <option value="12" selected="">Driver's License</option>
+                            <option value="13">SSS</option>
+                            <option value="14">National ID</option>
+                        </select><input class="form-control" type="text" placeholder="ID Number" style="margin-bottom: 20px;"></div>
+                    <div class="input-group"><input class="form-control" type="text" placeholder="Approval / Auth Code" style="margin-bottom: 20px;"></div>
+                    <div class="input-group"><input class="form-control" type="text" placeholder="Last 4 Digits of Card" style="margin-bottom: 20px;"></div>
+                    <div class="input-group"><button class="btn btn-secondary" type="button" style="width: 50%;" data-bs-dismiss="modal">Cancel</button><button class="btn btn-primary" type="button" style="width: 50%;">Confirm</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" role="dialog" tabindex="-1" id="discountModal">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-white text-bg-dark">
+                    <h4 class="modal-title">Discount</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="row">
+                            <div class="col">
+                                <div style="margin-bottom: 20px;">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h5 class="fw-bold text-dark">Customer Details</h5>
+                                        </div>
+                                        <div class="col">
+                                            <div class="form-check form-switch form-check-reverse fw-bold text-dark" style="margin-right: 12px;margin-top: -8px;"><input class="form-check-input" type="checkbox" id="formCheck-2" style="font-size: 20px;"><label class="form-check-label fs-5" for="formCheck-2">All Item</label></div>
+                                        </div>
+                                    </div>
+                                    <div class="input-group" style="margin: 0 0 10px;"><select class="bg-dark form-select" style="color: var(--bs-modal-bg);">
+                                            <option value="12" selected="">Senior Citizen</option>
+                                            <option value="13">PWD</option>
+                                            <option value="14">Employee Discount</option>
+                                            <option value="">Happy Hour Promo</option>
+                                            <option value="">Others</option>
+                                        </select><input class="form-control" type="text" placeholder="Full Name"></div>
+                                    <div class="input-group" style="margin: 0 0 10px;"><input class="form-control" type="text" placeholder="ID Number" inputmode="numeric"></div>
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <h5 class="fw-bold text-dark">Discount Amount Php.</h5>
+                                    <div class="input-group input-group-sm" style="margin: 0 0 10px;"><button class="btn btn-dark fw-semibold" type="button" style="font-size: 20px;">-10</button><button class="btn btn-dark fw-semibold" type="button" style="font-size: 20px;">-1</button><input class="form-control" type="number" style="text-align: center;font-size: 20px;" value="0"><button class="btn btn-success fw-semibold link-light" type="button" style="font-size: 20px;">+1</button><button class="btn btn-success fw-semibold link-light" type="button" style="font-size: 20px;">+10</button></div>
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <h5 class="fw-bold text-dark">Discount %</h5>
+                                    <div class="input-group input-group-sm" style="margin: 0 0 10px;"><button class="btn btn-dark fw-semibold" type="button" style="font-size: 20px;">-10</button><button class="btn btn-dark fw-semibold" type="button" style="font-size: 20px;">-1</button><input class="form-control" type="number" value="0" style="text-align: center;font-size: 20px;"><button class="btn btn-success fw-semibold link-light" type="button" style="font-size: 20px;">+1</button><button class="btn btn-success fw-semibold link-light" type="button" style="font-size: 20px;">+10</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center"><button class="btn btn-secondary" id="closedEditProductModal-2" type="button" data-bs-dismiss="modal" style="width: 47%;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" style="margin: -4px;">
+                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path>
+                        </svg>&nbsp;Cancel</button><button class="btn btn-primary" type="button" style="width: 47%;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-64 0 512 512" width="1em" height="1em" fill="currentColor" style="margin-top: -4px;">
+                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M374.6 73.39c-12.5-12.5-32.75-12.5-45.25 0l-320 320c-12.5 12.5-12.5 32.75 0 45.25C15.63 444.9 23.81 448 32 448s16.38-3.125 22.62-9.375l320-320C387.1 106.1 387.1 85.89 374.6 73.39zM64 192c35.3 0 64-28.72 64-64S99.3 64.01 64 64.01S0 92.73 0 128S28.7 192 64 192zM320 320c-35.3 0-64 28.72-64 64s28.7 64 64 64s64-28.72 64-64S355.3 320 320 320z"></path>
+                        </svg>&nbsp;Confirm</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" role="dialog" tabindex="-1" id="serviceChargeModal">
+        <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-white text-bg-dark">
+                    <h4 class="modal-title">Service Charge</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="row">
+                            <div class="col">
+                                <div style="margin-bottom: 20px;">
+                                    <div class="input-group" style="margin: 0 0 10px;"></div>
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <h5 class="fw-bold text-dark">Service Amount Php.</h5>
+                                    <div class="input-group input-group-sm" style="margin: 0 0 10px;"><button class="btn btn-dark fw-semibold" type="button" style="font-size: 20px;">-10</button><button class="btn btn-dark fw-semibold" type="button" style="font-size: 20px;">-1</button><input class="form-control" type="number" style="text-align: center;font-size: 20px;" value="0"><button class="btn btn-success fw-semibold link-light" type="button" style="font-size: 20px;">+1</button><button class="btn btn-success fw-semibold link-light" type="button" style="font-size: 20px;">+10</button></div>
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <h5 class="fw-bold text-dark">Service %</h5>
+                                    <div class="input-group input-group-sm" style="margin: 0 0 10px;"><button class="btn btn-dark fw-semibold" type="button" style="font-size: 20px;">-10</button><button class="btn btn-dark fw-semibold" type="button" style="font-size: 20px;">-1</button><input class="form-control" type="number" value="0" style="text-align: center;font-size: 20px;"><button class="btn btn-success fw-semibold link-light" type="button" style="font-size: 20px;">+1</button><button class="btn btn-success fw-semibold link-light" type="button" style="font-size: 20px;">+10</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-center"><button class="btn btn-secondary" id="closedEditProductModal-3" type="button" data-bs-dismiss="modal" style="width: 47%;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-96 0 512 512" width="1em" height="1em" fill="currentColor" style="margin: -4px;">
+                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"></path>
+                        </svg>&nbsp;Cancel</button><button class="btn btn-primary" type="button" style="width: 47%;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -32 576 576" width="1em" height="1em" fill="currentColor" style="margin-top: -4px;">
+                            <!--! Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. -->
+                            <path d="M568.2 336.3c-13.12-17.81-38.14-21.66-55.93-8.469l-119.7 88.17h-120.6c-8.748 0-15.1-7.25-15.1-15.99c0-8.75 7.25-16 15.1-16h78.25c15.1 0 30.75-10.88 33.37-26.62c3.25-20-12.12-37.38-31.62-37.38H191.1c-26.1 0-53.12 9.25-74.12 26.25l-46.5 37.74L15.1 383.1C7.251 383.1 0 391.3 0 400v95.98C0 504.8 7.251 512 15.1 512h346.1c22.03 0 43.92-7.188 61.7-20.27l135.1-99.52C577.5 379.1 581.3 354.1 568.2 336.3zM279.3 175C271.7 173.9 261.7 170.3 252.9 167.1L248 165.4C235.5 160.1 221.8 167.5 217.4 179.1s2.121 26.2 14.59 30.64l4.655 1.656c8.486 3.061 17.88 6.095 27.39 8.312V232c0 13.25 10.73 24 23.98 24s24-10.75 24-24V221.6c25.27-5.723 42.88-21.85 46.1-45.72c8.688-50.05-38.89-63.66-64.42-70.95L288.4 103.1C262.1 95.64 263.6 92.42 264.3 88.31c1.156-6.766 15.3-10.06 32.21-7.391c4.938 .7813 11.37 2.547 19.65 5.422c12.53 4.281 26.21-2.312 30.52-14.84s-2.309-26.19-14.84-30.53c-7.602-2.627-13.92-4.358-19.82-5.721V24c0-13.25-10.75-24-24-24s-23.98 10.75-23.98 24v10.52C238.8 40.23 221.1 56.25 216.1 80.13C208.4 129.6 256.7 143.8 274.9 149.2l6.498 1.875c31.66 9.062 31.15 11.89 30.34 16.64C310.6 174.5 296.5 177.8 279.3 175z"></path>
+                        </svg>&nbsp;Confirm</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" role="dialog" tabindex="-1" id="sessionEndModal">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-fullscreen-sm-down" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-bg-dark">
+                    <h4 class="modal-title">Shift Summary: Kenneth Salvador</h4><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div style="padding: 18px 18px 0 18px;">
+                            <h4 class="fw-bold text-dark">Sales Summary</h4>
+                            <div class="row" style="padding: 0 20px;">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Net Sales:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fs-4 fw-bold text-success">P 18,500</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Refunds:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-danger">P 2,100</p>
+                                </div>
+                            </div>
+                            <div class="row" style="padding: 0 20px;">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Service Charge:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-dark">P 18,500</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Discount:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-warning">P 500</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 18px 18px 0 18px;">
+                            <h4 class="fw-bold text-dark">Payment Received</h4>
+                            <div class="row" style="padding: 0 20px;">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Cash Total:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-dark">P 18,500</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Gcash Total:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-dark">P 2,100</p>
+                                </div>
+                            </div>
+                            <div class="row" style="padding: 0 20px;">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Card Total:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-dark">P 18,500</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Credit Total:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-dark">P 2,100</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 18px 18px 0 18px;">
+                            <h4 class="fw-bold text-dark">Float Declaration</h4>
+                            <div class="row" style="padding: 0 20px;">
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold">Starting Cash:</p>
+                                </div>
+                                <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                                    <p class="fw-bold text-dark">P 18,500</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="padding: 18px 18px 0 18px;">
+                            <h4 class="fw-bold text-dark">Cash Declaration</h4>
+                            <div class="input-group"><span class="text-bg-dark input-group-text">Cash Declared (P):</span><input class="form-control" type="number" placeholder="Enter amount declared"></div>
+                        </div>
+                        <div style="padding: 18px 18px 0 18px;">
+                            <h3 class="fw-bold text-center text-dark" style="margin: 25px 0;">*** 5,185.00 ***</h3>
+                            <div class="row">
+                                <div class="col text-center">
+                                    <h4 class="fw-bold text-center text-dark">Cash Variance/Difference:</h4>
+                                </div>
+                                <div class="col text-center">
+                                    <h4 class="fw-bold text-center text-primary" style="text-decoration:  underline;">P 15.00 (Short)</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer"><button class="btn btn-danger" type="button" data-bs-dismiss="modal">Print Report</button><button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button" style="width: 30%;" data-bs-target="#liveToast" data-bs-toggle="toast">Confirm</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!--! LIVE TOAST -->
+    <div id="alertModal1" class="alert alert-dismissible position-fixed bottom-0 start-0 p-3 w-25 d-none" role="alert" style="margin-left: 15px;">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <span><strong id="alertModalMessage1"></strong></span>
+    </div>
+    <script src="assets/js/jquery.min.js?h=84e399b8f2181ccd73394fdeddff1638"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js?h=01bb7ae0c0b11509558f2aa83f244399"></script>
+    <script src="assets/js/bs-init.js?h=e62deec2adf5671d6d2c56b275445e5c"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src="assets/js/Simple-Slider.js?h=84b1d7cbf88bb21b37fb412ca8f94640"></script>
+    <script src="assets/js/theme.js?h=79f403485707cf2617c5bc5a2d386bb0"></script>
+    <script src="assets/js-controller/pos/product.js"></script>
+    <script src="assets/js-controller/pos/currentOrder.js"></script>
+</body>
+
+</html>

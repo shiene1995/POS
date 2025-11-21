@@ -1,0 +1,12 @@
+@media (max-width: 576px) {
+  img {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .infoCol {
+    text-align: center;
+  }
+}
+
